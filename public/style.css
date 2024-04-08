@@ -1,0 +1,52 @@
+body {
+  font-family: 'Lato', sans-serif;
+  background-image: url('../assets/bckimg.png'); /* Replace 'background.jpg' with the path to your image */
+  background-size: cover;
+  
+}
+
+* {
+  margin: 0px;
+}
+
+.header {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 62px;
+  z-index: 1;
+}
+
+.logo {
+  width: 100%;
+  height: 62px;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  
+}
+
+img {
+  height: 50px;
+}
+
+.logo-img{
+  height: 50px;
+}
+
+.header_text{
+  font-family: 'Lato', sans-serif;
+  font-size: x-large;
+  color: #466077;
+}
+
+.navbargrp{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50vh;
+  gap: 20px;  
+}
