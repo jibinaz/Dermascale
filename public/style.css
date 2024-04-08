@@ -1,8 +1,17 @@
+@font-face {
+  font-family: 'founderfont';
+  src: url(../assets/FoundersGrotesk-Regular.otf);
+}
+
+
 body {
-  font-family: 'Lato', sans-serif;
-  background-image: url('../assets/bckimg.png'); /* Replace 'background.jpg' with the path to your image */
+  font-family: 'founderfont';
+  background-image: url('../assets/bkk.png'); 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
-  
+
 }
 
 * {
@@ -20,20 +29,8 @@ body {
   z-index: 1;
 }
 
-.logo {
-  width: 100%;
-  height: 62px;
-  display: flex;
-  flex-shrink: 0;
-  align-items: center;
-  
-}
 
 img {
-  height: 50px;
-}
-
-.logo-img{
   height: 50px;
 }
 
@@ -45,8 +42,52 @@ img {
 
 .navbargrp{
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50vh;
-  gap: 20px;  
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: 100px;
+  font-size: larger;
+  gap: 30px;
+
 }
+.link{
+  text-decoration: none;
+  color:#474037;
+  transition: 0.3s;
+}
+
+.link:hover {
+  color:#8c7c67;
+  text-decoration-line: underline;
+}  
+
+.title{
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  gap: 40px;
+  
+}
+.tit{
+  height: 700px;
+  
+  
+}
+.box{
+  height: 50px;
+  width: 150px;
+  background-color:#8e7452;
+  box-shadow: 10px 10px rgba(33, 22, 22, 0.2);
+  border-radius: 15px;
+
+  
+}
+.box p{
+  margin-top: 15px;
+  margin-left: 20px;
+  font-size: 140%;
+  color: aliceblue;
+   
+
+}
+
+
