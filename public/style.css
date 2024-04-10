@@ -6,53 +6,50 @@
 
 body {
   font-family: 'founderfont';
-  background-image: url('../assets/bkk.png'); 
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
-
 }
 
 * {
-  margin: 0px;
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
 }
 
 .header {
   display: flex;
-  flex-shrink: 0;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
   position: fixed;
   width: 100%;
-  height: 62px;
+  height: 60px;
   z-index: 1;
+  background-color: white;
 }
-
+#section1{
+  height: 100vh;
+  background-image: url('../assets/bkk.png'); 
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+}
 
 img {
   height: 50px;
 }
 
-.header_text{
-  font-family: 'Lato', sans-serif;
-  font-size: x-large;
-  color: #466077;
-}
-
 .navbargrp{
   display: flex;
   flex-direction: row;
-  margin-left: auto;
-  margin-right: 100px;
-  font-size: larger;
+  font-size: x-large;
   gap: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
 
 }
 .link{
   text-decoration: none;
   color:#474037;
-  transition: 0.3s;
+  
 }
 
 .link:hover {
@@ -61,33 +58,38 @@ img {
 }  
 
 .title{
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: fit-content;
-  gap: 40px;
-  
+  align-items: left;
+  padding: 20px;
+  height: 100vh;
+  background-image: url('../assets/bkk.png'); 
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .tit{
-  height: 700px;
-  
-  
+  height: 600px;
+  width: 85vw;
 }
 .box{
+  position: absolute;
+  bottom: 30vh;
+  margin-left: 40px;
   height: 50px;
   width: 150px;
   background-color:#8e7452;
-  box-shadow: 10px 10px rgba(33, 22, 22, 0.2);
-  border-radius: 15px;
-
-  
-}
-.box p{
-  margin-top: 15px;
-  margin-left: 20px;
-  font-size: 140%;
   color: aliceblue;
-   
-
+  border-radius: 15px;
+  border-color: #8e7452;
+  font-size: medium;
+  transition-duration: 0.4s;
 }
+.box:hover{
+  transform: translate(-2px, 2px);
+  cursor: pointer;
+}
+
 
 

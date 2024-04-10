@@ -13,15 +13,30 @@
       <a class="link" href="../main/aboutus.html">About Us</a>
       <a class="link" href="../main/skingiude.html">Skin Guide</a>
       <a class="link" href="../main/faq.html">FAQs</a>
-      <a class="link" href="../main/login.html">Login</a>
+
     </div>
   </div>
   <div class="title">
+    <img class="tit" src="../assets/titlee.png" alt="">
+    <button class="box" onclick="scrollToSection('#section1')"><span class="text">Get Started</span></button>
+  </div> 
+  </div>
+  <div id="section1">
     
-    <div class="box">
-      <p>Get Started</p>
-    </div>
-  </div>  
+  </div> 
+  <script>
+  
+    function scrollToSection(sectionId) {
+      var section = document.querySelector(sectionId);
+      if (section) {
+        var sectionTop = section.offsetTop;
+        window.scrollTo({
+          top: sectionTop,
+          behavior:"smooth"
+        });
+      }
+    }
+  </script>
       
 </body>
 
