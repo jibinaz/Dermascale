@@ -31,6 +31,16 @@ body {
   z-index: 1;
   background-color: white;
 }
+.header1{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 1;
+  
+}
 #section1{
   position: relative;
   display: flex;
@@ -209,6 +219,37 @@ body {
   width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 18%;
+  background-position-y: 24%;
   height: 450px;
+}
+
+.textabt{
+  width: auto;
+  height: 80px;
+  padding: 60px;
+}
+
+.textabt p{
+  font-family: 'founder font';
+  text-align: center;
+  font-size:  24px;
+  color:#4c4032;
+  
+}
+.skinguide{
+  background-image: url('../assets/skbk.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 450px;
+ 
+}
+
+.sktitle{
+  font-family: 'baskerville';
+  font-size: 68px;
+  color: #474037;
+  padding: 58px;
+  margin-left: 30vh;
+  
+
 }
