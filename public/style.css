@@ -261,3 +261,12 @@ body {
 .content strong{
   font-weight: bold;
 }
+
+.faq{
+  background-image: url('../assets/faqbck.png');
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 14%;
+  height: 730px;
+}
