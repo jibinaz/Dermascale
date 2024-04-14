@@ -250,6 +250,14 @@ body {
   color: #474037;
   padding: 58px;
   margin-left: 30vh;
+}
+.content{
   
-
+  font-family: 'founderfont';
+  color:#474037;
+  font-size: x-large;
+  padding: 38px;
+}
+.content strong{
+  font-weight: bold;
 }
