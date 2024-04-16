@@ -257,6 +257,7 @@ body {
   color:#474037;
   font-size: x-large;
   padding: 38px;
+  
 }
 .content strong{
   font-weight: bold;
@@ -264,9 +265,27 @@ body {
 
 .faq{
   background-image: url('../assets/faqbck.png');
-  
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: 14%;
+  background-position-x: -60px;
+  background-position-y: 64%;
   height: 730px;
+  font-family: 'founderfont';
 }
+.faq h1{
+  font-family: 'baskerville';
+  text-align:center;
+  font-size: 54px;
+  color: #474037;
+  padding: 68px;
+}
+
+.faqc{
+  font-size:25px;
+  color:#474037;
+  margin-left: 120px;
+  padding: 18px;
+
+}
+
+  
