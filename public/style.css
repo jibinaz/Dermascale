@@ -285,7 +285,53 @@ body {
   color:#474037;
   margin-left: 120px;
   padding: 18px;
-
 }
+.container1{
+  display: flex;
+  flex-grow: 1;
+  justify-content: left;
+  align-items: center;
+  padding: 50px;
+  
+  
+}
+.entries{
+  display: flex;
+  flex-direction: column;
+  font-family: 'baskerville';
+  font-size: 40px;
+  color:#453e36;
+  width: 100%;
+}
+.entries :hover{
+  background-color:rgba(0,0,0,0.04); ;
+}
+.texts{
+  border-top: 1px solid rgba(214, 224, 230, 0.8);
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.scontent{
+  display: none;
+}
+.abutton{
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #453e36; /* Adjust color and size as needed */
+  border-bottom: none;
+  margin-left: 80%;
+  transition: border-top-color 0.3s ease;
+  transition: transform 0.3s ease;
+  }
+  .abutton:hover{
+    border-top-color:#97856f;
+    cursor: pointer;
+  }
+.abutton.inverted {
+    transform: rotate(180deg); /* Rotate arrow when inverted */
+  }
 
   
