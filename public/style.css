@@ -252,7 +252,6 @@ body {
   margin-left: 30vh;
 }
 .content{
-  
   font-family: 'founderfont';
   color:#474037;
   font-size: x-large;
@@ -302,11 +301,13 @@ body {
   font-size: 40px;
   color:#453e36;
   width: 100%;
+  
 }
 .entries :hover{
   background-color:rgba(0,0,0,0.04); ;
 }
 .texts{
+  width: 100%;
   border-top: 1px solid rgba(214, 224, 230, 0.8);
   padding: 10px;
   margin-left: 20px;
@@ -314,6 +315,11 @@ body {
 
 .scontent{
   display: none;
+  font-family: 'founderfont';
+  color: #524637;
+  font-size: x-large;
+  margin-left: 60px;
+  
 }
 .abutton{
   width: 0;
@@ -322,9 +328,9 @@ body {
   border-right: 10px solid transparent;
   border-top: 15px solid #453e36; /* Adjust color and size as needed */
   border-bottom: none;
-  margin-left: 80%;
   transition: border-top-color 0.3s ease;
   transition: transform 0.3s ease;
+  
   }
   .abutton:hover{
     border-top-color:#97856f;
@@ -334,4 +340,9 @@ body {
     transform: rotate(180deg); /* Rotate arrow when inverted */
   }
 
-  
+  .dropper {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    justify-content: space-between;
+  }

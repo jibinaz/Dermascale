@@ -23,12 +23,48 @@
   <div class="list"  style ="margin-top: 0%;">
     <div class="container1">
       <div class="entries">
-        <div class="texts">Psoriasis<button class="abutton"></button></div>
-        <div class="texts">Seborrheic Dermatitis</div>
-        <div class="texts">Lichen Planus</div>
-        <div class="texts">Pityriasis Rosea</div>
-        <div class="texts">Chronic Dermatitis</div>
-        <div class="texts">Pityriasis Rubra Pilaris</div>
+        <div class="dropper" onclick="toggleContent(this)">
+          <div class="texts">Psoriasis</div>
+          <button class="abutton"></button>
+        </div>
+        <div class="scontent">
+          Some cONTENTS GOES OVER HERE
+        </div>
+        <div class="dropper" onclick="toggleContent(this)">
+          <div class="texts">Seborrheic Dermatitis</div>
+          <button class="abutton"></button>
+        </div>
+        <div class="scontent">
+          Some cONTENTS GOES OVER HERE
+        </div>
+        <div class="dropper" onclick="toggleContent(this)">
+          <div class="texts">Lichen Planus</div>
+          <button class="abutton"></button>
+        </div>
+        <div class="scontent">
+          Some cONTENTS GOES OVER HERE
+        </div>
+        <div class="dropper" onclick="toggleContent(this)">
+          <div class="texts">Pityriasis Rosea</div>
+          <button class="abutton"></button>
+        </div>
+        <div class="scontent">
+          Some cONTENTS GOES OVER HERE
+        </div>
+        <div class="dropper" onclick="toggleContent(this)">
+          <div class="texts">Chronic Dermatitis</div>
+          <button class="abutton"></button>
+        </div>
+        <div class="scontent">
+          Some cONTENTS GOES OVER HERE
+        </div>
+        <div class="dropper" onclick="toggleContent(this)">
+          <div class="texts">Pityriasis Rubra Pilaris</div>
+          <button class="abutton"></button>
+        </div>
+        <div class="scontent">
+          Some cONTENTS GOES OVER HERE  
+        </div>
         
       </div>
 
@@ -36,3 +72,18 @@
   </div>
 
   </div>  
+
+  <script>
+    function toggleContent(header) {
+  var content = header.nextElementSibling; // Get the content element
+  var arrow = header.querySelector('.arrow-button'); // Get the arrow button
+
+  if (content.style.display === 'none') {
+    content.style.display = 'block'; // Show content
+    arrow.classList.add('inverted'); // Rotate arrow
+  } else {
+    content.style.display = 'none'; // Hide content
+    arrow.classList.remove('inverted'); // Reset arrow rotation
+  }
+}
+  </script>
