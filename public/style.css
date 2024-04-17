@@ -346,3 +346,15 @@ body {
     white-space: nowrap;
     justify-content: space-between;
   }
+
+  .rcontent{
+    font-family: 'founderfont';
+    color:#474037;
+    font-size: xx-large;
+    text-align: center;
+    padding: 90px;
+  }
+
+  .rcontent strong{
+    font-weight: bold;
+  }
