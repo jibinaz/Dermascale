@@ -22,8 +22,10 @@
 
                         </div>
                         <div class="cust-card-desc">
-                           
-The Koebner phenomenon is when skin conditions like psoriasis or eczema develop in areas where the skin has been injured or irritated.It's like the skin is "reacting" to the injury by showing signs of the condition.
+
+                            The Koebner phenomenon is when skin conditions like psoriasis or eczema develop in areas
+                            where the skin has been injured or irritated.It's like the skin is "reacting" to the injury
+                            by showing signs of the condition.
                         </div>
                         <div class="cust-level-sel">
                             <span id="level_1_sel_val">-</span>
@@ -51,8 +53,10 @@ The Koebner phenomenon is when skin conditions like psoriasis or eczema develop 
 
                         </div>
                         <div class="cust-card-desc">
-                            
-Follicular papules are small, raised bumps that develop around hair follicles on the skin.These papules often appear red or skin-colored and may be accompanied by itching or discomfort.
+
+                            Follicular papules are small, raised bumps that develop around hair follicles on the
+                            skin.These papules often appear red or skin-colored and may be accompanied by itching or
+                            discomfort.
                         </div>
                         <div class="cust-level-sel">
                             <span id="level_2_sel_val">-</span>
@@ -80,8 +84,10 @@ Follicular papules are small, raised bumps that develop around hair follicles on
 
                         </div>
                         <div class="cust-card-desc">
-                            
-Fibrosis of the papillary dermis refers to the formation of excess fibrous tissue in the upper layer of the skin known as the papillary dermis. This condition can occur due to various factors such as chronic inflammation, injury, or certain skin disorders. 
+
+                            Fibrosis of the papillary dermis refers to the formation of excess fibrous tissue in the
+                            upper layer of the skin known as the papillary dermis. This condition can occur due to
+                            various factors such as chronic inflammation, injury, or certain skin disorders.
                         </div>
                         <div class="cust-level-sel">
                             <span id="level_3_sel_val">-</span>
@@ -109,8 +115,10 @@ Fibrosis of the papillary dermis refers to the formation of excess fibrous tissu
 
                         </div>
                         <div class="cust-card-desc">
-                            
-Clubbing of rete ridges refers to a dermatological condition where there is an abnormal enlargement or rounding of the tips of the dermal papillae, which are projections in the skin's upper layer (epidermis).
+
+                            Clubbing of rete ridges refers to a dermatological condition where there is an abnormal
+                            enlargement or rounding of the tips of the dermal papillae, which are projections in the
+                            skin's upper layer (epidermis).
                         </div>
                         <div class="cust-level-sel">
                             <span id="level_4_sel_val">-</span>
@@ -138,8 +146,9 @@ Clubbing of rete ridges refers to a dermatological condition where there is an a
 
                         </div>
                         <div class="cust-card-desc">
-                            
-The term "disappearance of the granular layer" refers to a dermatological condition characterized by the loss or reduction of the granular layer in the epidermis of the skin.
+
+                            The term "disappearance of the granular layer" refers to a dermatological condition
+                            characterized by the loss or reduction of the granular layer in the epidermis of the skin.
                         </div>
                         <div class="cust-level-sel">
                             <span id="level_5_sel_val">-</span>
@@ -167,7 +176,9 @@ The term "disappearance of the granular layer" refers to a dermatological condit
 
                         </div>
                         <div class="cust-card-desc">
-                            Vacuolization refers to the formation of small empty spaces or vacuoles within cells. When vacuolization occurs in the basal layer of the skin, it can indicate damage or abnormalities in the basal cells, which are located at the bottom layer of the epidermis.
+                            Vacuolization refers to the formation of small empty spaces or vacuoles within cells. When
+                            vacuolization occurs in the basal layer of the skin, it can indicate damage or abnormalities
+                            in the basal cells, which are located at the bottom layer of the epidermis.
                         </div>
                         <div class="cust-level-sel">
                             <span id="level_6_sel_val">-</span>
@@ -192,7 +203,8 @@ The term "disappearance of the granular layer" refers to a dermatological condit
         </div>
         <div class="swiper-pagination"></div>
     </div>
-
+    
+    <div style="width: 100%; font-size: xx-large; text-align: center;"><p>OUTPUT: </p> <p id="output"></p></div>
 
     <div style="text-align: center; margin-top: 15px;">
         <button id="btnSubmitValues" type="button" class="cust-submit-btn">SUBMIT</button>
@@ -202,11 +214,11 @@ The term "disappearance of the granular layer" refers to a dermatological condit
         style="text-align: center; margin-top: 15px;font-family: 'Roboto Condensed';font-weight: 600;color: #df0808;font-size: 13px;">
         <span id="error_message"></span>
     </div>
-    
+
     <script src="../public/swiper-bundle.min.js"></script>
 
     <script src="../jquery/jquery-3.7.1.min.js"></script>
-    
+
     <script>
         var swiper = new Swiper('.swiper-container.two', {
             pagination: {
@@ -236,12 +248,27 @@ The term "disappearance of the granular layer" refers to a dermatological condit
             var val5 = $('#level_5_sel_val').html();
             var val6 = $('#level_6_sel_val').html();
 
-            console.log(val1);
-            console.log(val2);
-            console.log(val3);
-            console.log(val4);
-            console.log(val5);
-            console.log(val6);
+            let jsonObject = {
+                "koebner_phenomenon": val1,
+                "follicular_papules": val2,
+                "fibrosis_papillary_dermis": val3,
+                "clubbing_rete_ridges": val4,
+                "disappearance_granular_layer": val5,
+                "vacuolisation_damage_basal_layer": val6
+            };
+
+            fetch('http://localhost:5000/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(jsonObject),
+            })
+                .then(response => response.json())
+                .then(data => document.getElementById("output").innerHTML = data.prediction)
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
 
             if (val1 == "-" || val2 == "-" || val3 == "-" || val4 == "-" || val5 == "-" || val6 == "-") {
                 //console.log("Select all values!");
