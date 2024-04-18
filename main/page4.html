@@ -204,7 +204,7 @@
         <div class="swiper-pagination"></div>
     </div>
     
-    <div style="width: 100%; font-size: xx-large; text-align: center;"><p>OUTPUT: </p> <p id="output"></p></div>
+    <div style="width: 100%; font-size: xx-large; text-align: center;"><p>OUTPUT: </p> <p id="output"></p> <p>Reffer the skin guide <a href="http://127.0.0.1:5500/main/skingiude.html">here</a></p></div>
 
     <div style="text-align: center; margin-top: 15px;">
         <button id="btnSubmitValues" type="button" class="cust-submit-btn">SUBMIT</button>
@@ -265,7 +265,7 @@
                 body: JSON.stringify(jsonObject),
             })
                 .then(response => response.json())
-                .then(data => document.getElementById("output").innerHTML = data.prediction)
+                .then(data => document.getElementById("output").innerHTML = `Class:` + data.prediction)
                 .catch((error) => {
                     console.error('Error:', error);
                 });
